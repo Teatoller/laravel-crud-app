@@ -15,6 +15,9 @@ class ShareController extends Controller
     public function index()
     {
         //
+        $share = Share::ll();
+
+        return view('shares.index', compact('shares'));
     }
 
     /**
