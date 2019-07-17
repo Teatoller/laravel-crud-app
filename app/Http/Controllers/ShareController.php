@@ -15,7 +15,7 @@ class ShareController extends Controller
     public function index()
     {
         //
-        $share = Share::ll();
+        $shares = Share::all();
 
         return view('shares.index', compact('shares'));
     }
@@ -74,6 +74,9 @@ class ShareController extends Controller
     public function edit($id)
     {
         //
+        $share = Share::find($id);
+
+        return view('shares.edit', compact('share'));
     }
 
     /**
